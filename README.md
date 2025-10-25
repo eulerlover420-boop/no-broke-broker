@@ -4,11 +4,11 @@ A modern financial tracker with monthly bill reminders featuring an iOS-style li
 
 ## Features
 
-- 💰 Track income and expenses
-- 📅 Monthly bill reminders
-- 🎨 iOS 26-inspired glassmorphism design
-- ✨ Multi-layered transparency with frosted blur
-- 🌈 Iridescent gradients and glossy reflections
+-  Track income and expenses
+-  Monthly bill reminders
+-  iOS 26-inspired glassmorphism design
+-  Multi-layered transparency with frosted blur
+-  Iridescent gradients and glossy reflections
 
 ## Design Specifications
 
@@ -34,3 +34,4 @@ npm start
 - CSS3 (Backdrop filters, gradients, transitions)
 - Vanilla JavaScript
 - Local Storage for data persistence
+
