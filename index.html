@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Tracker - Liquid Glass UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="glass-container header-card">
+            <div class="icon-wrapper">
+                <svg class="icon-large" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="title">Financial Tracker</h1>
+            <p class="subtitle">Manage your finances with style</p>
+        </header>
+
+        <!-- Balance Overview -->
+        <div class="glass-container balance-card">
+            <div class="card-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                    <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h2>Balance Overview</h2>
+            </div>
+            <div class="balance-amount" id="totalBalance">$0.00</div>
+            <div class="balance-details">
+                <div class="balance-item income">
+                    <span class="label">Income</span>
+                    <span class="amount" id="totalIncome">$0.00</span>
+                </div>
+                <div class="balance-item expense">
+                    <span class="label">Expenses</span>
+                    <span class="amount" id="totalExpense">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Transaction Section -->
+        <div class="glass-container add-transaction-card">
+            <div class="card-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+                    <path d="M12 8V16M8 12H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h2>Add Transaction</h2>
+            </div>
+            <form id="transactionForm" class="transaction-form">
+                <input type="text" id="description" placeholder="Description" required class="glass-input">
+                <input type="number" id="amount" placeholder="Amount" step="0.01" required class="glass-input">
+                <select id="type" required class="glass-input">
+                    <option value="">Select Type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit" class="glass-button">
+                    <svg class="icon-small" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Add Transaction
+                </button>
+            </form>
+        </div>
+
+        <!-- Bill Reminders Section -->
+        <div class="glass-container bills-card">
+            <div class="card-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="white" stroke-width="2"/>
+                    <path d="M16 2V6M8 2V6M3 10H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h2>Monthly Bill Reminders</h2>
+            </div>
+            <form id="billForm" class="transaction-form">
+                <input type="text" id="billName" placeholder="Bill Name" required class="glass-input">
+                <input type="number" id="billAmount" placeholder="Amount" step="0.01" required class="glass-input">
+                <input type="number" id="billDay" placeholder="Day of Month (1-31)" min="1" max="31" required class="glass-input">
+                <button type="submit" class="glass-button">
+                    <svg class="icon-small" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 13L9 17L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Add Bill Reminder
+                </button>
+            </form>
+            <div id="billsList" class="bills-list"></div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="glass-container transactions-card">
+            <div class="card-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3H21V21H3V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 9H21M9 21V9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2>Recent Transactions</h2>
+            </div>
+            <div id="transactionsList" class="transactions-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

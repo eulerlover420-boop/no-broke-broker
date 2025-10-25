@@ -1,0 +1,17 @@
+{
+  "name": "financial-tracker-glass",
+  "version": "1.0.0",
+  "description": "Financial tracker with iOS-style liquid glass interface and monthly bill reminders",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "financial-tracker",
+    "glassmorphism",
+    "ios-design",
+    "bill-reminders"
+  ],
+  "author": "",
+  "license": "MIT"
+}
